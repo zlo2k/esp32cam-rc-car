@@ -21,7 +21,7 @@
 #define PIN_M1_IN2 15
 #define PIN_M2_IN1 12
 #define PIN_M2_IN2 13
-#define MIN_MOTOR_SPEED 80 // (0 to 255)
+#define MIN_MOTOR_SPEED 20 // (0 to 255)
 #define FRAME_SIZE FRAMESIZE_VGA
 #define JPEG_QUALITY 25 // (0 to 63) lower means higher quality
 
@@ -88,7 +88,6 @@ void setup()
 
 
   ArduinoOTA.setHostname("esp32car");                  
-  ArduinoOTA.setPassword("zlodey123");
   ArduinoOTA.begin();                  
 }
 
