@@ -7,18 +7,20 @@
 #include <JoyCoords.h>
 #include <Car.h>
 #include <sensor.h>
+#include <ESPmDNS.h>
+#include <ArduinoOTA.h>
 
 // Replace with your network credentials
-#define WIFI_SSID "ESP32_CAR"
-#define WIFI_PWD "supercar"
-#define WIFI_AP_MODE true // Access Point mode (no internet connection)
+#define WIFI_SSID "whome4"
+#define WIFI_PWD "zlodeyumka"
+#define WIFI_AP_MODE false // Access Point mode (no internet connection)
 #define JOYSTICK_DEBUG true
-#define PIN_FRONT_LED 2
-#define PIN_CAMERA_LED 4
+#define PIN_FRONT_LED 1
+#define PIN_CAMERA_LED 3
 #define PIN_M1_IN1 14
 #define PIN_M1_IN2 15
-#define PIN_M2_IN1 12
-#define PIN_M2_IN2 13
+#define PIN_M2_IN1 2
+#define PIN_M2_IN2 4
 #define MIN_MOTOR_SPEED 80 // (0 to 255)
 #define FRAME_SIZE FRAMESIZE_VGA
 #define JPEG_QUALITY 25 // (0 to 63) lower means higher quality
@@ -83,9 +85,15 @@ void setup()
   socketServer.init(coordsHandler,
                     buttonAHandler,
                     buttonBHandler);
+
+
+  ArduinoOTA.setHostname("esp32car");                  
+  ArduinoOTA.setPassword("zlodey123");
+  ArduinoOTA.begin();                  
 }
 
 void loop()
 {
+  ArduinoOTA.handle();
   socketServer.loop();
 }
