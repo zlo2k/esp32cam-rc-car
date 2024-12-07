@@ -15,12 +15,12 @@
 #define WIFI_PWD "zlodeyumka"
 #define WIFI_AP_MODE false // Access Point mode (no internet connection)
 #define JOYSTICK_DEBUG true
-#define PIN_FRONT_LED 1
-#define PIN_CAMERA_LED 3
+#define PIN_FRONT_LED 3
+#define PIN_CAMERA_LED 4
 #define PIN_M1_IN1 14
 #define PIN_M1_IN2 15
-#define PIN_M2_IN1 2
-#define PIN_M2_IN2 4
+#define PIN_M2_IN1 12
+#define PIN_M2_IN2 13
 #define MIN_MOTOR_SPEED 80 // (0 to 255)
 #define FRAME_SIZE FRAMESIZE_VGA
 #define JPEG_QUALITY 25 // (0 to 63) lower means higher quality
