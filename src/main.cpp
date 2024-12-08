@@ -11,8 +11,8 @@
 #include <ArduinoOTA.h>
 
 // Replace with your network credentials
-#define WIFI_SSID "whome4"
-#define WIFI_PWD "zlodeyumka"
+#define WIFI_SSID "you-ssid"
+#define WIFI_PWD "you-password"
 #define WIFI_AP_MODE false // Access Point mode (no internet connection)
 #define JOYSTICK_DEBUG true
 #define PIN_FRONT_LED 3
@@ -21,7 +21,7 @@
 #define PIN_M1_IN2 15
 #define PIN_M2_IN1 12
 #define PIN_M2_IN2 13
-#define MIN_MOTOR_SPEED 20 // (0 to 255)
+#define MIN_MOTOR_SPEED 0 // (0 to 255)
 #define FRAME_SIZE FRAMESIZE_VGA
 #define JPEG_QUALITY 25 // (0 to 63) lower means higher quality
 
@@ -87,7 +87,7 @@ void setup()
                     buttonBHandler);
 
 
-  ArduinoOTA.setHostname("esp32car");                  
+  ArduinoOTA.setPassword("carota");      
   ArduinoOTA.begin();                  
 }
 
