@@ -11,8 +11,8 @@
 #include <ArduinoOTA.h>
 
 // Replace with your network credentials
-#define WIFI_SSID "you-ssid"
-#define WIFI_PWD "you-password"
+#define WIFI_SSID "your-ssid"
+#define WIFI_PWD "your-pass"
 #define WIFI_AP_MODE false // Access Point mode (no internet connection)
 #define JOYSTICK_DEBUG true
 #define PIN_FRONT_LED 3
